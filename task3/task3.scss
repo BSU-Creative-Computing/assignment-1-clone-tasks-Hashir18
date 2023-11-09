@@ -1,0 +1,74 @@
+// Variables
+$colors: #8ccff7, #e2eff1, #4e89ae, #43658b, #ed6663, #ffa372, #444;
+$footer_colors: nth($colors, 2), nth($colors, 1);
+$circle_colors: nth($colors, 3) nth($colors, 4) nth($colors, 5) nth($colors, 6);
+$circle_radii: 70px 80px 90px 100px;
+
+// Mixins
+@mixin flex-container($direction) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+// CSS rules
+* {
+  margin: 0;
+}
+
+.container {
+  @media (min-width: 621px) {
+    .circles {
+      @include flex-container(row);
+    }
+  }
+}
+
+.image {
+  @include flex-container(row);
+  background-color: nth($colors, 1);
+}
+
+img {
+  display: block;
+}
+
+// Create footer elements
+@for $i from 1 through length($footer_colors) {
+  .footer:nth-child(#{$i}) {
+    background-color: nth($footer_colors, $i);
+    height: 50px;
+  }
+}
+
+.circles {
+  @include flex-container(column);
+  background-color: nth($colors, 2);
+  padding: 10px 0;
+}
+
+// Create circles and apply styles
+@for $i from 1 through 4 {
+  $circle_color: nth($circle_colors, $i);
+  $circle_radius: nth($circle_radii, $i);
+
+  .color:nth-child(#{$i}),
+  .color:hover:nth-child(#{$i}),
+  .circle:nth-child(#{$i}),
+  .circle:hover:nth-child(#{$i}) {
+    background-color: $circle_color;
+  }
+
+  .color:nth-child(#{$i}) {
+    height: 40px;
+  }
+
+  .circle:nth-child(#{$i}) {
+    width: $circle_radius;
+    height: $circle_radius;
+    align-self: center;
+    margin: 10px;
+    border-radius: 50%;
+  }
+}
