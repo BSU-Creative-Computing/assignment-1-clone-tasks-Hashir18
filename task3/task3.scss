@@ -1,74 +1,169 @@
-// Variables
-$colors: #8ccff7, #e2eff1, #4e89ae, #43658b, #ed6663, #ffa372, #444;
-$footer_colors: nth($colors, 2), nth($colors, 1);
-$circle_colors: nth($colors, 3) nth($colors, 4) nth($colors, 5) nth($colors, 6);
-$circle_radii: 70px 80px 90px 100px;
+/*colour section*/
 
-// Mixins
-@mixin flex-container($direction) {
+$body-color: #8ccff7;
+$hover-color: #444;
+$strip-1: #4e89ae;
+$strip-2: #43658b;
+$strip-3: #ed6663;
+$strip-4: #ffa372;
+$circle-1-height: 70px;
+$circle-2-height: 80px;
+$circle-3-height: 90px;
+$circle-4-height: 100px;
+$bottom-color: #FFFFFF;
+/*body*/
+
+body {
+  padding: 0;
+  margin: 0;
+
+}
+/*top part also known as px frame*/
+
+.top-box{
+  background-color: $body-color;
+}
+/*bottom part all the stripes and circles*/
+
+.bottom-box{
+  background-color: $bottom-color;
+}
+/*px frame*/
+
+.pxframe {
   display: flex;
-  flex-direction: $direction;
-  align-items: center;
+  background-color: $body-color;
   justify-content: center;
 }
+/*stripes*/
 
-// CSS rules
-* {
-  margin: 0;
-}
 
-.container {
-  @media (min-width: 621px) {
-    .circles {
-      @include flex-container(row);
-    }
-  }
+.Stripes {
+  margin-top: 30px;
+  display: grid;
+  grid-template-rows: repeat(5, 25px);
+  grid-template-columns: repeat(1, 1fr);
 }
-
-.image {
-  @include flex-container(row);
-  background-color: nth($colors, 1);
-}
-
-img {
-  display: block;
-}
-
-// Create footer elements
-@for $i from 1 through length($footer_colors) {
-  .footer:nth-child(#{$i}) {
-    background-color: nth($footer_colors, $i);
-    height: 50px;
-  }
-}
+/*circles*/
 
 .circles {
-  @include flex-container(column);
-  background-color: nth($colors, 2);
-  padding: 10px 0;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.circle-1 {
+  height: $circle-1-height;
+  width: $circle-1-height;
+  background-color: $strip-1;
+
+  
+
 }
 
-// Create circles and apply styles
-@for $i from 1 through 4 {
-  $circle_color: nth($circle_colors, $i);
-  $circle_radius: nth($circle_radii, $i);
+.circle-2 {
+  width: $circle-2-height;
+  height: $circle-2-height;
+  background-color: $strip-2;
 
-  .color:nth-child(#{$i}),
-  .color:hover:nth-child(#{$i}),
-  .circle:nth-child(#{$i}),
-  .circle:hover:nth-child(#{$i}) {
-    background-color: $circle_color;
+}
+
+.circle-3 {
+  width: $circle-3-height;
+  height: $circle-3-height; 
+  background-color: $strip-3;
+
+}
+
+.circle-4 {
+  height: $circle-4-height;
+  width: $circle-4-height;
+  background-color: $strip-4;
+
+}
+
+.circles div {
+  border-radius:  100%;
+  color: white;
+}
+/*stripes colours*/
+
+.strip1 {
+  background-color: $strip-1;
+  
+}
+
+
+.strip2{
+  background-color: $strip-2;
+}
+
+.strip3{
+  background-color: $strip-3;
+}
+
+.strip4 {
+  background-color: $strip-4;
+}
+/*Hover for the full bottom part*/
+.strip1:hover, .strip2:hover, .strip3:hover, .strip4:hover,  .circle-1:hover, .circle-2:hover, .circle-3:hover, .circle-4:hover {
+  background-color: $hover-color; 
+}
+/*header section*/
+header {
+  background-color: $body-color;
+  width: 100%;
+}
+/*footer section also the blue stripe on the bottom of the screen*/
+
+footer{
+  background-color: $body-color;
+  width: 100%;
+  height: 30px;
+}
+/*all media queries*/
+
+@media  (min-width: 801px) {
+  .pxframe div {
+    background-image: url(400.png);
+    width: 400px;
+    height: 400px;
   }
-
-  .color:nth-child(#{$i}) {
-    height: 40px;
+  .circles {
+    flex-direction: row;
+    
   }
+}
+@media (min-width: 600px) and (max-width: 800px) {
+  .pxframe div {
+    background-image: url(400.png);
+    width: 400px;
+    height: 400px;
+  }
+  .circles {
+    flex-direction: row;
+  }
+}
 
-  .circle:nth-child(#{$i}) {
-    width: $circle_radius;
-    height: $circle_radius;
-    align-self: center;
-    margin: 10px;
-    border-radius: 50%;
+@media (min-width: 480px) and (max-width: 600px) {
+  .pxframe div {
+    background-image: url(300.png);
+    width: 300px;
+    height: 350px;
+  }
+  .circles {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .pxframe div {
+    background-image: url(200.png);
+    width: 200px;
+    height: 250px;
+  }
+  .circles {
+    flex-direction: column;
   }
 }
