@@ -1,307 +1,357 @@
-
-
-.body {
-  padding: 1.5vw 10vw 0 10vw;
-  display: flex;
-  justify-content: center;
-  background-color: white;
-}
 .header > h1 {
   font-size: 32px;
+  width: 100%;
 }
-
- 
-
-
-.movie2, .movie1 {
-  box-shadow: 0 1px 3px 1px rgb(78, 76, 76) ;
-  margin-right: 10px;
-  margin-top: 10px;
+body{
+  background-color: #E3DBDA;
+  height: 1400px;
 }
-.menu > a:hover {
-  background-color: dodgerblue;
-}
-.menu > a, .menu > a:hover {
-  flex: 1;
+.links {
   height: 100%;
-  font-size: 0.8em;
+  width: 20vw;
+  display: flex;
+}
+.header {
+  background-color: #1e90ff;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding: 0 2vw;
+  width: 100%;
+  width: 145vh;
+}
+.links > a, .links > a:hover {
   color: white;
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  .menu {
-    height: 100%;
-    width: 100%; /* Make the menu take up the full width */
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .menu > a {
-    flex: 1;
-    font-size: 0.8em;
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-}
-.search-bar {
-  width: 100%;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-input {
-  padding: 0.5vw;
-  margin-left: 10vw;
-  width: 20vw;
-  font-size: 0.7em;
-  background:white;
-  flex: auto;
-  
-}
-
-img {
-  width: 100%;
-  display: block;
-}
-
-p {
-  margin: 1vw 0;
-}
-
-.button {
-  background-color: rgb(27, 152, 255);
-  color: white;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  padding: 0;
-}
-.menu {
+  flex: 1;
   height: 100%;
-  width: 20vw;
+  font-size: 0.8em;
+}
+.left{
   display: flex;
+  flex-direction: column;
 }
-* {
-  margin: 0; /* to Remove default margins */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 20px;
-}
-.header {
-  background-color: dodgerblue;
-  color: white;
-  height: 10vh;
-  padding: 0 2vw;
+.top{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
- 
+  flex-direction: column;
 }
-
-
-.movie2 > .text {
-  padding-top: 1vw;
-}
-
-.movie2 > .button {
-  margin: 1vw;
-}
-
-.items {
+.bottom{
   display: flex;
+  flex-direction: row;
 }
 
-.items > .item1 {
-  flex: 5;
-}
-
-.movie1 {
-  display: flex;
-  flex-flow: column nowrap;
-  padding-bottom: 1vw;
-}
-
-.movie1 > .text {
-  padding: 1vw;
-}
-
-
-.items > .item2 {
-  display: flex;
-  flex-flow: row wrap;
-  flex: 5;
-}
-
-.movie2 {
-  padding: 3%;
-  display: flex;
-  flex-flow: column nowrap;
-  box-sizing: border-box;
-  
-}
-
-
-.movie1 a, .movie1 .links > a:hover, .movie2 a, .movie2 .links > a:hover {
-  border-radius: 3px;
-  padding: 0 0.6vw 0.6vw;
-  color: white;
-  border: none;
-  align-self: flex-end;
-  margin: auto 1vw 0vw auto;
-  background-color: rgb(27, 152, 255);
-  
-}
-
-#millenium {
-  margin-top: auto;
-}
-
-input {
-  display: none;
-}
-
-.movie1, .movie {
+.avenjer{
+  padding-bottom: 20px;
+ display: flex;
+ flex-direction:column;
+  margin-top: 5pc;
+   width: 500px;
+   margin-left: 10pc;
   background-color: white;
+  box-shadow: 1px 1px 1px 1px rgb(99, 97, 97);
+  text-align: left;
+  border-radius: 2px;
+  border: none;
 }
-.footer {
-  background-color: rgb(238, 238, 238);
-  display: flex;
-  justify-content: center;
-  padding: 3vw 0 1.5vw 0;
+.avenjertext{
+  margin-left: 15px;
+}
+.avbutton{
+  background-color: dodgerblue;
+  margin-left: 22pc;
+  border: none;
+  border-radius: 4px;
+}
+.lone{
+  width: 300px;
+  margin-left: 43pc;
+  padding-bottom: 10px;
+  position: relative; bottom: 43.5pc;
+ background-color: white;
+ box-shadow: 1px 1px 1px 1px rgb(99, 97, 97);
+ text-align: left;
+ border-radius: 2px;
+ border: none;
+ display: flex;
+ flex-direction: column;
+}
+.lonetext{
+  margin-left: 15px;
+}
+.lonebutton{
+  background-color: dodgerblue;
+  margin-left: 1pc;
+  border: none;
+  border-radius: 4px;
+  width: 40px;
+  
+}
+.limg{
+  margin-left: 10px;
 }
 
-@media (min-width: 1281px) {
-  .movie2 {
-    padding: 3%;
-    width: calc(50% - 1vw);
-  }
-  :nth-child(odd of .right-movie) {
-    margin: 0 1vw;
-  }
-  :nth-last-child(-n+2 of .right-movie) {
-    margin-top: 1vw;
-  }
-  :nth-last-child(1 of .links > a, .links > a:hover) {
-    display: none;
-  }
+.milli{
+  width: 300px;
+  margin-left:62.5pc;
+  padding-bottom: 10px;
+  position: relative; bottom: 75.7pc;
+ background-color: white;
+ box-shadow: 1px 1px 1px 1px rgb(99, 97, 97);
+ text-align: left;
+ border-radius: 2px;
+ border: none;
+ display: flex;
+ flex-direction: column;
 }
-@media (min-width: 1025px) and (max-width: 1280px) {
-  .body {
-    padding: 1.5vw 2vw 0 2vw;
-  }
-  .movie2 {
-    padding: 3%;
-    width: calc(50% - 1vw);
-  }
-  :nth-child(odd of .right-movie) {
-    margin: 0 1vw;
-  }
-  :nth-last-child(-n+2 of .right-movie) {
-    margin-top: 1vw;
-  }
-  :nth-last-child(1 of .links > a, .links > a:hover) {
-    display: none;
-  }
-  .links {
-    width: 25vw;
-  }
+.millitext{
+  margin-left: 15px;
 }
-@media (min-width: 801px) and (max-width: 1024px) {
-  .body {
-    padding: 1.5vw 2vw 0 2vw;
-  }
-  .items > .item1 {
-    flex: 7;
-  }
-  .items > .item2 {
-    flex: 3;
-  }
-  .movie2 {
-    width: 100%;
-    margin-left: 0.5vw;
-  }
-  :nth-last-child(-n+3 of .right-movie) {
-    margin-top: 1.5vw;
-  }
-  :nth-last-child(1 of .links > a, .links > a:hover) {
-    display: none;
-  }
-  .menu {
+.millibutton{
+  background-color: dodgerblue;
+  margin-left: 13pc;
+  border: none;
+  border-radius: 4px;
+  width: 40px;
+  
+}
+.mimg{
+  margin-left: 10px;
+}
+
+
+
+.pred{
+  width: 300px;
+  margin-left:43pc;
+  padding-bottom: 10px;
+  position: relative; bottom:74pc;
+ background-color: white;
+ box-shadow: 1px 1px 1px 1px rgb(99, 97, 97);
+ text-align: left;
+ border-radius: 2px;
+ border: none;
+ display: flex;
+ flex-direction: column;
+}
+.predtext{
+  margin-left: 15px;
+}
+.predbutton{
+  background-color: dodgerblue;
+  margin-left: 13pc;
+  border: none;
+  border-radius: 4px;
+  width: 40px;
+  
+}
+.pimg{
+  margin-left: 10px;
+}
+/* Style for list items (optional) */
+
+
+.rage{
+  width: 300px;
+  margin-left: 10px;
+  padding-bottom: 10px;
+  position: relative; bottom: 74pc;
+ background-color: white;
+ box-shadow: 1px 1px 1px 1px rgb(99, 97, 97);
+ text-align: left;
+ border-radius: 2px;
+ border: none;
+ display: flex;
+ flex-direction: column;
+}
+.ragetext{
+  margin-left: 15px;
+}
+.ragebutton{
+  background-color: dodgerblue;
+  margin-left: 13pc;
+  border: none;
+  border-radius: 4px;
+  width: 40px;
+  
+}
+.rimg{
+  margin-left: 10px;
+}
+
+
+
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+  .header {
     flex-direction: row;
-    width: 100%;
-  }
+    align-items: center;
 }
-@media (min-width: 481px) and (max-width: 800px) {
-  .items {
+.right{
+    display: flex;
     flex-direction: column;
-  }
-  .movie2 {
-    margin-top: 2vw;
-    width: calc(50% - 1vw);
-  }
 }
-:nth-last-child(1 of .links > a, .links > a:hover) {
-  flex: 0;
-  margin-left: auto;
-  padding: 0 2vw;
-}
-  :nth-child(odd of .right-movie) {
-    margin-right: 2vw;
-  }
-  .footer {
-    padding: 7vh 0 5vh 0;
-  }
-  :nth-child(-n+4 of .links > a, .links > a:hover) {
-    display: none;
-  
-  input {
-    display: none;
-  }
-  .menu {
-    width: 50vw;
-  }
- 
+.header{
+  width: 150%;
 }
 
-@media (max-width: 480px) {
-  .items {
-    flex-direction: column;
+.links {
+    display: none;
+}
+.bottom{
+  display: flex;
+  flex-direction: column;
+}
+.top{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.avenjer{
+  width: 60%;
+  margin-left: 0%;
+}
+.lone,
+.milli,
+.pred,
+.rage {
+    width: 40%;
+    margin-left: 38pc;
+    position: static;
+    bottom: auto;
+    position: relative; bottom: 47pc;
+}
+
+.avenjer img,
+.lone img,
+.milli img,
+.pred img,
+.rage img {
+    width: 100%;
+    height: auto;
+}
+
+.avbutton,
+.lonebutton,
+.millibutton,
+.predbutton,
+.ragebutton {
+    margin-left: 0;
+}
+}
+
+
+
+
+@media (min-width: 481px) and (max-width: 800px) {
+  .header {
+      flex-direction: row;
+      align-items: center;
   }
-  .items > .item2 {
-    flex-flow: column nowrap;
+  .right{
+      display: flex;
+      flex-direction: row;
   }
-  .movie2 {
-    margin: 1.5vw 0;
-  }
-  .movie2 {
-    margin: 1.5vw 0;
+  .header{
     width: 100%;
   }
-  .footer {
-    padding: 7vh 0 5vh 0;
+
+  .links {
+      display: none;
   }
-  .movie1 > a, .links.movie1 > a:hover, .movie2 > a, .links.movie2 > a:hover {
-    margin: 0 2vw 2vw auto;
-    padding: 0 2vw 1vw 2vw;
+  .bottom{
+    display: flex;
+    flex-direction: row;
   }
-  :nth-child(-n+4 of .links > a, .links > a:hover) {
-    display: none;
-  }
-  :nth-last-child(1 of .links > a, .links > a:hover) {
-    flex: 0;
-    margin-left: auto;
-    padding: 0 2vw;
-    
-  }
-  .menu {
-    width: 50vw;
+  .top{
+    display: flex;
+    flex-direction: row;
   }
   
+
+  .avenjer,
+  .lone,
+  .milli,
+  .pred,
+  .rage {
+      width: 100%;
+      margin-left: 0;
+      position: static;
+      bottom: auto;
+  }
+
+  .avenjer img,
+  .lone img,
+  .milli img,
+  .pred img,
+  .rage img {
+      width: 100%;
+      height: auto;
+  }
+
+  .avbutton,
+  .lonebutton,
+  .millibutton,
+  .predbutton,
+  .ragebutton {
+      margin-left: 0;
+  }
+}
+@media  (max-width: 480px) {
+  .header {
+      flex-direction: row;
+      align-items: center;
+  }
+  .right{
+      display: flex;
+      flex-direction: column;
+  }
+  .header{
+    width: 100%;
+  }
+
+  .links {
+      display: none;
+  }
+  .bottom{
+    display: flex;
+    flex-direction: column;
+  }
+  .top{
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  .avenjer,
+  .lone,
+  .milli,
+  .pred,
+  .rage {
+      width: 100%;
+      margin-left: 0;
+      position: static;
+      bottom: auto;
+  }
+
+  .avenjer img,
+  .lone img,
+  .milli img,
+  .pred img,
+  .rage img {
+      width: 100%;
+      height: auto;
+  }
+
+  .avbutton,
+  .lonebutton,
+  .millibutton,
+  .predbutton,
+  .ragebutton {
+      margin-left: 0;
+  }
 }
