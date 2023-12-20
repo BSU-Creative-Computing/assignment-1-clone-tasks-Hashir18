@@ -8,7 +8,7 @@ body{
 }
 .links {
   height: 100%;
-  width: 20vw;
+  width: 150%; /* Change the width to 100% to make the nav bar stay full width */
   display: flex;
 }
 .header {
@@ -19,8 +19,8 @@ body{
   align-items: center;
   height: 10vh;
   padding: 0 2vw;
-  width: 100%;
-  width: 145vh;
+  width: 110%;
+ 
 }
 .links > a, .links > a:hover {
   color: white;
@@ -189,59 +189,60 @@ body{
   .header {
     flex-direction: row;
     align-items: center;
-}
-.right{
+    width: 100%;
+  }
+
+  .right {
     display: flex;
     flex-direction: column;
-}
-.header{
-  width: 150%;
-}
+  }
 
-.links {
+  .header {
+    width: 100%;
+  }
+
+  .links {
     display: none;
-}
-.bottom{
-  display: flex;
-  flex-direction: column;
-}
-.top{
-  display: flex;
-  flex-direction: column;
-}
+  }
 
+  .bottom,
+  .top {
+    display: flex;
+    flex-direction: column;
+  }
 
-.avenjer{
-  width: 60%;
-  margin-left: 0%;
-}
-.lone,
-.milli,
-.pred,
-.rage {
+  .avenjer {
+    width: 60%;
+    margin-left: 0;
+  }
+
+  .lone,
+  .milli,
+  .pred,
+  .rage {
     width: 40%;
-    margin-left: 38pc;
-    position: static;
+    margin-left: auto; /* Change margin-left to auto to push content to the right */
+position: absolute;
     bottom: auto;
-    position: relative; bottom: 47pc;
-}
+    position: relative; bottom: 53vh;
+  }
 
-.avenjer img,
-.lone img,
-.milli img,
-.pred img,
-.rage img {
+  .avenjer img,
+  .lone img,
+  .milli img,
+  .pred img,
+  .rage img {
     width: 100%;
     height: auto;
-}
+  }
 
-.avbutton,
-.lonebutton,
-.millibutton,
-.predbutton,
-.ragebutton {
+  .avbutton,
+  .lonebutton,
+  .millibutton,
+  .predbutton,
+  .ragebutton {
     margin-left: 0;
-}
+  }
 }
 
 
@@ -251,6 +252,13 @@ body{
   .header {
       flex-direction: row;
       align-items: center;
+  }
+  .header input[type="MENU"] {
+    display: none; /* Hide the search bar input */
+  }
+
+  .links {
+    display: flex; /* Display the menu links */
   }
   .right{
       display: flex;
